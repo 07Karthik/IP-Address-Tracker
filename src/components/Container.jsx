@@ -8,7 +8,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 const customIcon = new L.Icon({
-  iconUrl: "/assets/icon-location.svg", // Use your custom marker icon here
+  iconUrl: "../assets/icon-location.svg", // Use your custom marker icon here
   iconSize: [56, 61], // Set the size
   iconAnchor: [28, 61], // Anchor point for the icon (adjust to suit)
   popupAnchor: [1, -34], // Where the popup should open relative to the icon
