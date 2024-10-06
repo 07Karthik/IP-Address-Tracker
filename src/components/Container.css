@@ -1,5 +1,5 @@
 .container-top {
-  background: url("/assets/pattern-bg-desktop.png");
+  background: url("../assets/pattern-bg-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 35vh;
@@ -191,7 +191,7 @@
 }
 @media screen and (max-width:500px) {
   .container-top{
-    background: url("/assets/pattern-bg-mobile.png");
+    background: url("../assets/pattern-bg-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     
