@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Container.css";
 import Error from "./Error";
 import PanToLocation from "./PanToLocation";
-import icon_arrow from "../../public/assets/icon-arrow.svg";
+import icon_arrow from "/public/assets/icon-arrow.svg";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
