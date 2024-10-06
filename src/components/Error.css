@@ -1,0 +1,85 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Light black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Make sure it covers everything */
+}
+.error {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.7)
+  ); /* Gradient background */
+  color: white; /* White text for contrast */
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 5px 15px rgba(255, 255, 255, 0.1); /* Soft shadow */
+  backdrop-filter: blur(5px); /* Blurring effect for the background */
+  padding: 20px; /* Inner padding */
+  animation: pop-up 1s ease-out, fadeIn 2s ease-in-out;
+}
+
+.error h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.error p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.error h2,
+.error p {
+  animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+}
+
+@keyframes pop-up {
+  0% {
+    transform: translateY(-50px); /* Start below the normal position */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: translateY(20px); /* End at the normal position */
+    opacity: 1; /* End visible */
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .error {
+    width: 80%;
+  }
+  .error h2 {
+    font-size: 2.1rem;
+  }
+  .error p {
+    font-size: 1rem;
+  }
+}
